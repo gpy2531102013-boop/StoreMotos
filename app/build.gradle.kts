@@ -41,6 +41,11 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+
+    // Biometría y lista dinámica para el proyecto
+    implementation("androidx.biometric:biometric:1.1.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
