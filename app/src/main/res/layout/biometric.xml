@@ -1,69 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    tools:context=".BiometricLoginActivity">
+    android:background="#0B0B0F"
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tvTituloApp"
+    <ImageView
+        android:id="@+id/ivMoto"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="StoreMotos"
-        android:textAlignment="center"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:layout_height="150dp"
+        android:contentDescription="Imagen de motocicleta"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toTopOf="@+id/ivHuella"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="64dp" />
-
-    <TextView
-        android:id="@+id/tvSubtituloBiometric"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Acceso seguro con huella dactilar"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloApp" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
         android:id="@+id/ivHuella"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="48dp"
-        android:contentDescription="Icono de huella dactilar"
-        android:src="@android:drawable/ic_lock_idle_lock"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_lock_lock"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSubtituloBiometric" />
+        app:layout_constraintTop_toBottomOf="@+id/ivMoto"
+        app:tint="#9B5CFF" />
 
     <TextView
-        android:id="@+id/tvEstadoBiometric"
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="StoreMotos"
+        android:textColor="#F4F0FF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvSubtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivHuella" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Acceso seguro con huella"
+        android:textColor="#B0BEC5"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnHuella"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHuella"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:text="Autenticar con huella"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="#32156E"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEstadoBiometrico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo" />
+
+    <TextView
+        android:id="@+id/tvEstadoBiometrico"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="Coloca tu dedo en el sensor para ingresar"
-        android:textAlignment="center"
+        android:textColor="#CFD8DC"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivHuella" />
-
-    <Button
-        android:id="@+id/btnAutenticarHuella"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
-        android:text="Autenticar con huella"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEstadoBiometric" />
+        app:layout_constraintTop_toBottomOf="@+id/btnHuella" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

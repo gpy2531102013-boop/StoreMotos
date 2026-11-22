@@ -169,7 +169,8 @@
     <Button
         android:id="@+id/btnGuardarMoto"
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="#4A1C85"
         android:text="Guardar moto"
         android:textAllCaps="false"
@@ -182,8 +183,8 @@
     <Button
         android:id="@+id/btnVolverMenu"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#1B1724"
         android:text="Volver al menú"
         android:textAllCaps="false"

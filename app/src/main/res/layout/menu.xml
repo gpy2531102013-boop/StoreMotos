@@ -7,16 +7,28 @@
     android:background="#0B0B0F"
     android:padding="20dp">
 
+    <ImageView
+        android:id="@+id/ivMenuMoto"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Imagen de moto en menú"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvMenuTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
         android:text="StoreMotos"
         android:textColor="#9B5CFF"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivMenuMoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,10 +37,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
         android:text="Panel principal de inventario y taller"
         android:textColor="#B9AECF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivMenuMoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMenuTitulo" />
 
@@ -138,7 +151,8 @@
     <Button
         android:id="@+id/btnCerrarSesion"
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#4A1C85"
         android:text="Cerrar sesión"
         android:textAllCaps="false"
